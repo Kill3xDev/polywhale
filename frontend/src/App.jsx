@@ -1,8 +1,8 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, ReferenceLine } from "recharts";
 
-const API = "http://localhost:8000/api";
-const WS_URL = "ws://localhost:8000/ws";
+const API = "https://polywhale-production.up.railway.app/api";
+const WS_URL = "wss://polywhale-production.up.railway.app/ws";
 
 const fmt$   = (n) => n == null ? "—" : `$${Number(n).toLocaleString(undefined, {maximumFractionDigits:0})}`;
 const fmtPct = (n) => n == null ? "—" : `${(Number(n)*100).toFixed(1)}%`;
